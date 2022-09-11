@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="" >
+    <title>Conversor de Temperaturas</title>
+    <style>
+
+     body {
+        min-height: 400px;
+        background-color: #0ae49b;
+        background-size: 100vh;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+     }   
+
+     .container {
+        text-align: center;
+        padding: 20px;
+        height: 100vh;
+     } 
+
+     .page-title {
+        color: #000000;
+        margin: 0 0 5px;  
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+     }
+
+     .page-subtitle {
+        color: #000000;
+        margin-top: 5px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     }
+
+     .icons {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 60px;
+        padding-right: 19px;
+        
+     }
+
+     input {
+        margin: 12px;
+        padding: 6px;
+        border-radius: 5px;
+     }
+
+     label {
+        color: black;
+        font-style: italic;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     }
+
+     button {
+        margin-top: 12px;
+        padding: 4px 8px;
+        border-radius: 10px;
+        background: #f10606;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        
+     }
+
+     h2 {
+        color: #000000;
+        font-size: 30px;
+     }
+
+     .image-page {
+      border-style: outset;
+      border-color: red;
+      border-width: 10px;
+     }
+
+     .page-logo {
+         width: 250px;
+     }
+
+     i:hover {
+       color:rgb(5, 9, 235);  
+       transform: scale(1.5);       
+     }
+
+    </style>
+    <script>
+        function Converter() {
+          var valorElemento = document.getElementById("valor");
+          var valor = valorElemento.value;
+          var valorEmCelsiusNumerico = parseFloat(valor);
+
+          var valorEmKelvin = valorEmCelsiusNumerico + 213;
+
+          var elementoValorConvetido = document.getElementById("valorConvertido");
+          var valorConvertido = "A temperatura em Kelvin é " + valorEmKelvin;
+          elementoValorConvetido.innerHTML = valorConvertido;
+        }
+    </script>
+</head>
+<body>
+
+   <a href="https://www.google.com/" target="_blank">
+   <i class="fa-solid fa-house"></i></a>
+   <div class="container">
+   <h1 class="page-title">Conversor de Temperaturas</h1>
+
+   <p class="page-subtitle">Descubra a temperatura de Graus para Kelvin</p>
+
+   <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt=""><br><br>
+
+   <p><img class="image-page" src="https://tm.ibxk.com.br/2021/12/22/22145611217446.jpg?ims=1120x420" alt="" width="620px"></p>
+
+   <p><label for="temperatura">Insira a temperatura</label><br></p>
+   <i class="fa-solid fa-arrow-right"></i><input type="number" id="valor" size="2" /><br>
+   <button type="submit" onclick="Converter()"><b>Converter</b></button>
+
+   <h2 id="valorConvertido"></h2>
+   </div>
+
+   <div class="icons">
+   <a href="https://www.instagram.com/bruno_jones4/" target="_blank">
+   <i class="fa-brands fa-instagram"></i></a>
+   <i class="fa-brands fa-facebook"></i>
+   </div>
+
+<script src="https://kit.fontawesome.com/c53fe6e573.js" crossorigin="anonymous"></script>   
+</body>
+</html>
